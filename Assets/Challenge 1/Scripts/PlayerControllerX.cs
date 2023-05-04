@@ -23,9 +23,9 @@ public class PlayerControllerX : MonoBehaviour
         forwardInput = Input.GetAxis("Vertical");
 
         // move the plane forward at a constant rate
-        transform.Translate(Vector3.forward * speed * forwardInput * Time.deltaTime);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
         // tilt the plane up/down based on up/down arrow keys
-        transform.Rotate(Vector3.right * rotationSpeed * verticalInput);
+        transform.Rotate(Vector3.right * rotationSpeed * forwardInput);
     }
 }
